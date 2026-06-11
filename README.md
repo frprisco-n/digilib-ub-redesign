@@ -1,7 +1,7 @@
 # Digilib UB Redesign
 
 <p align="center">
-  <img src="assets/homepage-preview.png" alt="Digilib UB Preview">
+  <img src="assets/homepage-preview.jpeg" alt="Digilib UB Preview">
 </p>
 
 <p align="center">
