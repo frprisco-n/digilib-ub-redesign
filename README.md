@@ -1,7 +1,7 @@
 # Digilib UB Redesign
 
 <p align="center">
-  <img src="assets/homepage-preview.png" alt="Digilib UB Preview" width="900">
+  <img src="assets/homepage-preview.png" alt="Digilib UB Preview">
 </p>
 
 <p align="center">
@@ -9,58 +9,39 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/React-19-blue" />
-  <img src="https://img.shields.io/badge/TypeScript-5-blue" />
-  <img src="https://img.shields.io/badge/Vite-Latest-purple" />
-  <img src="https://img.shields.io/badge/Status-Prototype-orange" />
+  <a href="https://digilib-ub-redesign.vercel.app">
+    <img src="https://img.shields.io/badge/Live_Demo-Visit_Website-blue?style=for-the-badge" alt="Live Demo">
+  </a>
 </p>
 
----
+<p align="center">
+  <img src="https://img.shields.io/badge/React-19-blue" alt="React">
+  <img src="https://img.shields.io/badge/TypeScript-5-blue" alt="TypeScript">
+  <img src="https://img.shields.io/badge/Vite-Latest-purple" alt="Vite">
+  <img src="https://img.shields.io/badge/Status-Prototype-orange" alt="Prototype">
+</p>
 
 ## Overview
 
-Digilib UB Redesign is a high-fidelity redesign project of the Universitas Brawijaya Digital Library platform. The project aims to improve the overall user experience through a clearer information architecture, enhanced collection discovery, and a more intuitive search workflow.
+Digilib UB Redesign is a high-fidelity redesign project of the Universitas Brawijaya Digital Library platform. The project explores how a modern digital library experience can be achieved through improved information architecture, enhanced collection discovery, and a more intuitive search workflow.
 
-The redesign focuses on creating a modern, accessible, and responsive interface while maintaining consistency across all major user journeys, including collection browsing, advanced search, authentication, and informational pages.
-
-Rather than presenting static mockups, the project was implemented as a fully interactive web prototype using modern frontend technologies, allowing design decisions to be evaluated in a realistic environment.
-
----
+Rather than presenting static mockups, the redesign was implemented as an interactive web prototype, allowing design decisions to be evaluated in a realistic environment. The project focuses on usability, accessibility, visual consistency, and responsive design across key user journeys, including collection browsing, advanced search, authentication, and informational pages.
 
 ## Live Demo
 
-🔗 **https://digilib-ub-redesign.vercel.app**
+https://digilib-ub-redesign.vercel.app
 
----
+## Key Features
 
-## Features
+The prototype includes a redesigned homepage, collection browsing interface, advanced search functionality, authentication pages, and supporting informational pages. A consistent design system and reusable UI components were developed to maintain visual coherence throughout the application while supporting multiple screen sizes.
 
-* Homepage with collection search
-* Book collection browsing
-* Advanced search interface
-* Login and registration pages
-* About, Contact, and Help pages
-* Responsive design for multiple screen sizes
-* Consistent design system and reusable UI components
+## Technology Stack
 
----
-
-## Tech Stack
-
-| Technology   | Purpose                    |
-| ------------ | -------------------------- |
-| React        | Frontend framework         |
-| TypeScript   | Type safety                |
-| Vite         | Development and build tool |
-| Material UI  | Component library          |
-| Tailwind CSS | Styling system             |
-| Radix UI     | Accessible UI primitives   |
-
----
+This project was built using React, TypeScript, and Vite, with Material UI, Tailwind CSS, and Radix UI used to support component development, styling, and accessibility.
 
 ## Local Development
 
-Clone the repository and install dependencies:
+To run the project locally:
 
 ```bash
 npm install
@@ -73,27 +54,9 @@ The development server will be available at:
 http://localhost:5173
 ```
 
----
-
-## Project Structure
-
-```text
-src/
-├── app/
-│   ├── components/
-│   └── App.tsx
-├── imports/
-├── styles/
-└── main.tsx
-```
-
----
-
 ## Disclaimer
 
 This project was developed for educational and UI/UX design purposes. Collection records, book covers, and other content displayed within the application may include sample or placeholder data and do not necessarily represent the actual holdings of the Universitas Brawijaya Library.
-
----
 
 <p align="center">
   Developed as part of a Digital Library Redesign Project
