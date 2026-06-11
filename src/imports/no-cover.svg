@@ -1,0 +1,12 @@
+<svg width="640" height="960" viewBox="0 0 640 960" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="640" height="960" rx="48" fill="#F5F5F5"/>
+  <rect x="40" y="40" width="560" height="880" rx="36" fill="#FFFFFF" stroke="#D9D9D9" stroke-width="6" stroke-dasharray="18 16"/>
+  <circle cx="320" cy="360" r="98" fill="#E0E0E0"/>
+  <path d="M262 404C278 380 300 366 320 366C340 366 362 380 378 404" stroke="#BDBDBD" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="286" cy="334" r="20" fill="#BDBDBD"/>
+  <circle cx="354" cy="334" r="20" fill="#BDBDBD"/>
+  <path d="M214 612H426" stroke="#092C4C" stroke-width="18" stroke-linecap="round"/>
+  <path d="M242 660H398" stroke="#F2994A" stroke-width="14" stroke-linecap="round"/>
+  <text x="320" y="790" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="56" font-weight="700" fill="#092C4C">No Cover</text>
+  <text x="320" y="846" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="500" fill="#4F4F4F">Cover not available</text>
+</svg>
