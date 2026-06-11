@@ -1,0 +1,47 @@
+📚 QUICK START - Menambahkan Book Cover
+
+==================================================
+
+✅ SUDAH SIAP:
+- ✓ Folder covers dibuat: src/imports/covers/
+- ✓ Helper tool dibuat: book-cover-downloader.html
+- ✓ Panduan lengkap: BOOK_COVER_GUIDE.md
+
+==================================================
+
+🚀 MULAI DI SINI:
+
+1. BUKA FILE HELPER
+   Buka file ini di browser:
+   → book-cover-downloader.html
+   
+   (Double-click atau drag ke browser)
+
+2. IKUTI PANDUAN DI HALAMAN
+   - Klik tombol "Goodreads", "Google Images", atau "Amazon" 
+   - Cari dan download cover
+   - Simpan ke folder: src/imports/covers/
+   - Format nama: book_17.jpg, book_18.jpg, dst
+
+3. UPDATE KODE
+   Setelah semua cover tersimpan:
+   - Buka: src/app/components/BookCollectionPage.tsx
+   - Tambah import statements untuk semua cover baru
+   - Ganti imgNoCover → imgBook[ID] di array allBooks
+
+4. TEST
+   - Run: npm run dev
+   - Buka http://localhost:5173
+   - Lihat di "Daftar Koleksi" - cover harus muncul
+
+==================================================
+
+📋 BUKU YANG PERLU COVER: 35 buku
+   ID 17-51 (lihat di BOOK_COVER_GUIDE.md)
+
+📝 DOKUMENTASI LENGKAP:
+   Baca: BOOK_COVER_GUIDE.md
+
+==================================================
+
+Pertanyaan? Lihat bagian Tips & Trik di BOOK_COVER_GUIDE.md
