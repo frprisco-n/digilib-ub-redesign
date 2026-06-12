@@ -155,7 +155,7 @@ function ResultCard({
           {book.subject} · {book.year}
         </p>
       </div>
-    </div>
+    </button>
   );
 }
 
