@@ -156,7 +156,7 @@ function SearchBox({
       />
       <button
         onClick={onSubmit}
-        className="text-white text-sm sm:text-base font-semibold leading-6 rounded-lg px-4 sm:px-6 py-3 hover:opacity-90 transition-opacity whitespace-nowrap flex-shrink-0"
+        className="text-white text-sm sm:text-base font-semibold leading-6 rounded-lg px-4 sm:px-6 py-3 whitespace-nowrap flex-shrink-0 transition-all duration-300 hover:scale-105 hover:shadow-lg"
         style={{ backgroundColor: "#092c4c" }}
       >
         {buttonLabel}
@@ -176,7 +176,7 @@ function BookCard({
     <button
       type="button"
       onClick={() => onSelect(book)}
-      className="bg-white rounded-[10px] overflow-hidden cursor-pointer group text-left w-full"
+      className="bg-white rounded-[10px] overflow-hidden cursor-pointer group text-left w-full transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
       style={{
         boxShadow:
           "0px 4px 6px -1px rgba(0,0,0,0.1), 0px 2px 4px -2px rgba(0,0,0,0.1)",
@@ -186,7 +186,7 @@ function BookCard({
         <ImageWithFallback
           src={book.cover}
           alt={book.title}
-          className="absolute inset-0 w-full h-full object-contain pointer-events-none"
+          className="absolute inset-0 w-full h-full object-contain pointer-events-none transition-transform duration-500 group-hover:scale-105"
         />
         <div className="absolute inset-0 bg-black/10 group-hover:bg-black/5 transition-colors" />
       </div>
@@ -424,184 +424,202 @@ export default function App() {
   return (
     <div className="min-h-screen bg-white font-['Inter',sans-serif]">
       <AppHeader activePage="home" onNavigate={navigate} />
-
-      <section className="relative min-h-[calc(100vh-4rem)] md:min-h-[calc(100vh-5rem)] overflow-hidden">
-        <img
-          src={imgApp}
-          alt=""
-          aria-hidden
-          className="absolute inset-0 w-full h-full object-cover pointer-events-none"
-        />
-        <div className="absolute inset-0 bg-black/80" />
-        <div className="relative mx-auto max-w-[1320px] px-4 py-16 md:py-24 flex flex-col items-center text-center">
-          <div className="bg-white/10 border border-white/20 px-5 py-2 rounded-full mb-5">
-            <p className="text-xs sm:text-sm text-white/90">
-              Lebih dari 150.000 Koleksi Tersedia
+      <div className="fixed inset-0 z-0">
+        <section className="relative h-screen overflow-hidden">
+          <img
+            src={imgApp}
+            alt=""
+            aria-hidden
+            className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+            style={{ objectPosition: "51% center" }}
+          />
+          <div className="absolute inset-0 bg-black/80" />
+          <div className="relative mx-auto max-w-[1320px] px-4 h-full flex flex-col items-center justify-center text-center translate-y-10">
+            <div className="bg-white/10 border border-white/20 px-5 py-2 rounded-full mb-5">
+              <p className="text-xs sm:text-sm text-white/90">
+                Lebih dari 150.000 Koleksi Tersedia
+              </p>
+            </div>
+            <h1 className="text-3xl sm:text-4xl lg:text-[48px] font-bold text-white leading-tight">
+              Online Public Access Catalog
+            </h1>
+            <p className="text-base sm:text-lg lg:text-[20px] text-white/80 leading-7 mt-3 px-4">
+              Akses ribuan buku, jurnal, dan materi penelitian
             </p>
-          </div>
-          <h1 className="text-3xl sm:text-4xl lg:text-[48px] font-bold text-white leading-tight">
-            Online Public Access Catalog
-          </h1>
-          <p className="text-base sm:text-lg lg:text-[20px] text-white/80 leading-7 mt-3 px-4">
-            Akses ribuan buku, jurnal, dan materi penelitian
-          </p>
 
-          <div className="mt-8 mb-4 w-full max-w-[768px]">
-            <SearchBox
-              value={heroSearch}
-              onChange={setHeroSearch}
-              onSubmit={() => goToCollection(heroSearch)}
-              placeholder="Cari buku, jurnal, artikel, atau penulis..."
-              buttonLabel="Cari"
-            />
-          </div>
+            <div className="mt-8 mb-4 w-full max-w-[768px]">
+              <SearchBox
+                value={heroSearch}
+                onChange={setHeroSearch}
+                onSubmit={() => goToCollection(heroSearch)}
+                placeholder="Cari buku, jurnal, artikel, atau penulis..."
+                buttonLabel="Cari"
+              />
+            </div>
 
-          <button
-            onClick={() => setPage("advanced")}
-            className="text-sm text-white/70 hover:text-white transition-colors underline underline-offset-2"
-          >
-            Gunakan Pencarian Lanjutan -&gt;
-          </button>
+            <button
+              onClick={() => setPage("advanced")}
+              className="text-sm text-white/70 hover:text-white transition-colors underline underline-offset-2"
+            >
+              Gunakan Pencarian Lanjutan -&gt;
+            </button>
 
-          <div className="flex flex-col items-center gap-3 mt-8 mb-8">
-            <p className="text-sm text-white/70">Kata Kunci Populer</p>
-            <div className="flex items-center gap-2 flex-wrap justify-center">
-              {["Semua", "Buku", "Jurnal", "Skripsi"].map((kw) => (
-                <button
-                  key={kw}
-                  onClick={() => {
-                    setActiveKeyword(kw);
-                    goToCollection(kw === "Semua" ? "" : kw);
-                  }}
-                  className="h-10 px-5 rounded-full text-sm font-medium text-white transition-colors border border-white/20"
+            <div className="flex flex-col items-center gap-3 mt-8 mb-8">
+              <p className="text-sm text-white/70">Kata Kunci Populer</p>
+              <div className="flex items-center gap-2 flex-wrap justify-center">
+                {["Semua", "Buku", "Jurnal", "Skripsi"].map((kw) => (
+                  <button
+                    key={kw}
+                    onClick={() => {
+                      setActiveKeyword(kw);
+                      goToCollection(kw === "Semua" ? "" : kw);
+                    }}
+                    className="h-10 px-5 rounded-full text-sm font-medium text-white border border-white/20 transition-all duration-300  hover:scale-105 hover:border-white/40"
+                    style={{
+                      backgroundColor:
+                        activeKeyword === kw
+                          ? "#f2994a"
+                          : "rgba(255,255,255,0.1)",
+                    }}
+                  >
+                    {kw}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            <div className="hidden md:grid grid-cols-3 gap-4 w-full max-w-[896px]">
+              {[
+                { number: "150,000+", label: "KOLEKSI DIGITAL" },
+                { number: "45,000+", label: "ANGGOTA AKTIF" },
+                { number: "1,200+", label: "KOLEKSI BARU" },
+              ].map((stat) => (
+                <div
+                  key={stat.label}
+                  className="rounded-[10px] p-5 text-center"
                   style={{
-                    backgroundColor:
-                      activeKeyword === kw
-                        ? "#f2994a"
-                        : "rgba(255,255,255,0.1)",
+                    backgroundColor: "rgba(255,255,255,0.05)",
+                    border: "1.601px solid rgba(255,255,255,0.1)",
                   }}
                 >
-                  {kw}
+                  <p className="text-2xl sm:text-[30px] font-bold text-white leading-tight">
+                    {stat.number}
+                  </p>
+                  <p className="text-xs sm:text-sm font-medium text-white/70 mt-2">
+                    {stat.label}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      </div>
+      <div className="h-screen" />
+
+      <div
+        className="
+    relative
+    z-10
+    bg-white
+    rounded-t-[48px]
+    -mt-16
+    shadow-[0_-20px_60px_rgba(0,0,0,0.12)]
+  "
+      >
+        <div className="sticky top-16 md:top-20 z-40 w-full bg-white border-b border-[#e0e0e0] shadow-sm">
+          <div className="mx-auto max-w-[1320px] px-4 py-3 flex justify-center">
+            <div className="w-full max-w-[768px]">
+              <SearchBox
+                value={quickSearch}
+                onChange={setQuickSearch}
+                onSubmit={() => goToCollection(quickSearch)}
+                placeholder="Quick search..."
+                buttonLabel="Search"
+              />
+            </div>
+          </div>
+        </div>
+
+        <section
+          className="py-12 md:py-16"
+          style={{ backgroundColor: "#f5f5f5" }}
+        >
+          <div className="mx-auto max-w-[1320px] px-4">
+            <div className="flex items-start justify-between mb-8 gap-4">
+              <div>
+                <h2 className="text-2xl sm:text-3xl lg:text-[36px] font-bold leading-tight text-[#092c4c]">
+                  Rekomendasi Buku
+                </h2>
+                <p className="text-base sm:text-[18px] text-[#4f4f4f] leading-7 mt-2">
+                  Pilihan yang dikurasi khusus untuk anda
+                </p>
+              </div>
+              <button
+                onClick={() => setPage("collection")}
+                className="flex-shrink-0 text-sm sm:text-base font-semibold text-white px-4 sm:px-6 py-2.5 rounded-lg hover:opacity-90 transition-opacity mt-1"
+                style={{ backgroundColor: "#092c4c" }}
+              >
+                Cek Daftar Koleksi
+              </button>
+            </div>
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+              {books.map((book) => (
+                <BookCard
+                  key={book.id}
+                  book={book}
+                  onSelect={setSelectedBook}
+                />
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="py-12 md:py-16 bg-white">
+          <div className="mx-auto max-w-[1320px] px-4">
+            <div className="mb-8">
+              <h2 className="text-2xl sm:text-3xl lg:text-[36px] font-bold leading-tight text-[#092c4c]">
+                Berita Terbaru
+              </h2>
+              <p className="text-base sm:text-[18px] text-[#4f4f4f] leading-7 mt-2">
+                Tetap terinformasi mengenai kegiatan dan acara perpustakaan
+              </p>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
+              {news.map((item) => (
+                <button
+                  type="button"
+                  key={item.id}
+                  onClick={() => setSelectedNews(item)}
+                  className="bg-white rounded-[10px] overflow-hidden cursor-pointer group text-left transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+                  style={{
+                    border: "1.601px solid #e0e0e0",
+                    boxShadow: "0px 4px 6px -1px rgba(0,0,0,0.1)",
+                  }}
+                >
+                  <div className="relative overflow-hidden h-48 sm:h-56 md:h-64">
+                    <ImageWithFallback
+                      src={item.img}
+                      alt={item.title}
+                      className="absolute inset-0 w-full h-full object-cover pointer-events-none transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-black/10" />
+                  </div>
+                  <div className="p-5">
+                    <h3 className="text-lg sm:text-[22px] font-bold text-[#092c4c] leading-tight">
+                      {item.title}
+                    </h3>
+                    <p className="text-base text-[#4f4f4f] leading-7 mt-2">
+                      {item.date}
+                    </p>
+                  </div>
                 </button>
               ))}
             </div>
           </div>
+        </section>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full max-w-[896px]">
-            {[
-              { number: "150,000+", label: "KOLEKSI DIGITAL" },
-              { number: "45,000+", label: "ANGGOTA AKTIF" },
-              { number: "1,200+", label: "KOLEKSI BARU" },
-            ].map((stat) => (
-              <div
-                key={stat.label}
-                className="rounded-[10px] p-5 text-center"
-                style={{
-                  backgroundColor: "rgba(255,255,255,0.05)",
-                  border: "1.601px solid rgba(255,255,255,0.1)",
-                }}
-              >
-                <p className="text-2xl sm:text-[30px] font-bold text-white leading-tight">
-                  {stat.number}
-                </p>
-                <p className="text-xs sm:text-sm font-medium text-white/70 mt-2">
-                  {stat.label}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <div className="sticky top-16 md:top-20 z-40 w-full bg-white border-b border-[#e0e0e0] shadow-sm">
-        <div className="mx-auto max-w-[1320px] px-4 py-3 flex justify-center">
-          <div className="w-full max-w-[768px]">
-            <SearchBox
-              value={quickSearch}
-              onChange={setQuickSearch}
-              onSubmit={() => goToCollection(quickSearch)}
-              placeholder="Quick search..."
-              buttonLabel="Search"
-            />
-          </div>
-        </div>
+        <AppFooter onNavigate={navigate} />
       </div>
-
-      <section
-        className="py-12 md:py-16"
-        style={{ backgroundColor: "#f5f5f5" }}
-      >
-        <div className="mx-auto max-w-[1320px] px-4">
-          <div className="flex items-start justify-between mb-8 gap-4">
-            <div>
-              <h2 className="text-2xl sm:text-3xl lg:text-[36px] font-bold leading-tight text-[#092c4c]">
-                Rekomendasi Buku
-              </h2>
-              <p className="text-base sm:text-[18px] text-[#4f4f4f] leading-7 mt-2">
-                Pilihan yang dikurasi khusus untuk anda
-              </p>
-            </div>
-            <button
-              onClick={() => setPage("collection")}
-              className="flex-shrink-0 text-sm sm:text-base font-semibold text-white px-4 sm:px-6 py-2.5 rounded-lg hover:opacity-90 transition-opacity mt-1"
-              style={{ backgroundColor: "#092c4c" }}
-            >
-              Cek Daftar Koleksi
-            </button>
-          </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
-            {books.map((book) => (
-              <BookCard key={book.id} book={book} onSelect={setSelectedBook} />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-12 md:py-16 bg-white">
-        <div className="mx-auto max-w-[1320px] px-4">
-          <div className="mb-8">
-            <h2 className="text-2xl sm:text-3xl lg:text-[36px] font-bold leading-tight text-[#092c4c]">
-              Berita Terbaru
-            </h2>
-            <p className="text-base sm:text-[18px] text-[#4f4f4f] leading-7 mt-2">
-              Tetap terinformasi mengenai kegiatan dan acara perpustakaan
-            </p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
-            {news.map((item) => (
-              <button
-                type="button"
-                key={item.id}
-                onClick={() => setSelectedNews(item)}
-                className="bg-white rounded-[10px] overflow-hidden cursor-pointer hover:shadow-xl transition-shadow text-left"
-                style={{
-                  border: "1.601px solid #e0e0e0",
-                  boxShadow: "0px 4px 6px -1px rgba(0,0,0,0.1)",
-                }}
-              >
-                <div className="relative overflow-hidden h-48 sm:h-56 md:h-64">
-                  <ImageWithFallback
-                    src={item.img}
-                    alt={item.title}
-                    className="absolute inset-0 w-full h-full object-cover pointer-events-none"
-                  />
-                  <div className="absolute inset-0 bg-black/10" />
-                </div>
-                <div className="p-5">
-                  <h3 className="text-lg sm:text-[22px] font-bold text-[#092c4c] leading-tight">
-                    {item.title}
-                  </h3>
-                  <p className="text-base text-[#4f4f4f] leading-7 mt-2">
-                    {item.date}
-                  </p>
-                </div>
-              </button>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <AppFooter onNavigate={navigate} />
     </div>
   );
 }
