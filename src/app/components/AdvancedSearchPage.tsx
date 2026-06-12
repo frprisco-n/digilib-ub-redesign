@@ -3,6 +3,7 @@ import { ChevronDown, ChevronUp } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import svgPaths from '../../imports/HighFidelityPrototypeCreation/svg-k618aisq46';
 import { AppHeader, AppFooter, Page } from './AppShell';
+import type { Book as CollectionBook } from './BookCollectionPage';
 import imgBook0 from '../../imports/HighFidelityPrototypeCreation/ee19ae52921f656297a9cfa9abb0f32bebe6b426.png';
 import imgBook1 from '../../imports/HighFidelityPrototypeCreation/137ca34175f4cdc9b50bda19774356bfc96660b1.png';
 import imgBook2 from '../../imports/HighFidelityPrototypeCreation/cebe2cef357d304068b9b08cedc9f575d765ead7.png';
@@ -20,7 +21,7 @@ import imgSejarahIndonesia from '../../imports/335-scaled.jpg';
 import imgAlphaGirl from '../../imports/THE_ALPHA_GIRLS_GUIDE.png';
 import imgPsychMoney from '../../imports/psychology_of_money.jfif.png';
 
-type Book = { id: number; cover: string; genre: string; title: string; author: string; year: number; type: string; subject: string };
+type Book = Omit<CollectionBook, 'description'> & { subject: string };
 type Operator = 'AND' | 'OR' | 'NOT';
 type Field = 'Judul' | 'Penulis' | 'Subjek' | 'Jenis Koleksi' | 'Genre' | 'Tahun Terbit';
 type Condition = { id: number; operator: Operator; field: Field; value: string };
@@ -98,10 +99,12 @@ function SearchIcon() {
   );
 }
 
-function ResultCard({ book }: { book: Book }) {
+function ResultCard({ book, onSelect }: { book: Book; onSelect: (book: Book) => void }) {
   return (
-    <div
-      className="bg-white rounded-[10px] overflow-hidden flex cursor-pointer hover:shadow-lg transition-shadow"
+    <button
+      type="button"
+      onClick={() => onSelect(book)}
+      className="bg-white rounded-[10px] overflow-hidden flex hover:shadow-lg transition-shadow text-left"
       style={{ border: '1.601px solid #e0e0e0', boxShadow: '0px 2px 4px rgba(0,0,0,0.06)' }}
     >
       <div className="flex-shrink-0 w-24 sm:w-[140px] relative" style={{ minHeight: 150 }}>
@@ -121,7 +124,7 @@ function ResultCard({ book }: { book: Book }) {
         <p className="text-sm text-[#4f4f4f] leading-5 mb-1">{book.author}</p>
         <p className="text-xs text-[#bdbdbd]">{book.subject} · {book.year}</p>
       </div>
-    </div>
+    </button>
   );
 }
 
@@ -253,9 +256,9 @@ function SearchForm({
 
 // ── Main page ─────────────────────────────────────────────────────────────────
 
-type Props = { onNavigate: (page: Page) => void };
+type Props = { onNavigate: (page: Page) => void; onBookSelect: (book: Book) => void };
 
-export function AdvancedSearchPage({ onNavigate }: Props) {
+export function AdvancedSearchPage({ onNavigate, onBookSelect }: Props) {
   const [quickSearch,  setQuickSearch]  = useState('');
   const [conditions,   setConditions]   = useState<Condition[]>([{ id: 1, operator: 'AND', field: 'Judul', value: '' }]);
   const [sort,         setSort]         = useState('Relevansi');
@@ -402,7 +405,13 @@ export function AdvancedSearchPage({ onNavigate }: Props) {
                   </p>
                 </div>
                 <div className="space-y-4">
-                  {results.map((book) => <ResultCard key={book.id} book={book} />)}
+                  {results.map((book) => (
+                  <ResultCard
+                    key={book.id}
+                    book={book}
+                    onSelect={onBookSelect}
+                  />
+                ))}
                 </div>
               </>
             ) : (

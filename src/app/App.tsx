@@ -424,10 +424,16 @@ export default function App() {
       <BookCollectionPage
         initialSearch={collectionSearch}
         onNavigate={navigate}
-        onBookSelect={setSelectedBook}
+        onBookSelect={(book) => setSelectedBook(book)}
       />
     );
-  if (page === "advanced") return <AdvancedSearchPage onNavigate={navigate} />;
+  if (page === "advanced")
+    return (
+      <AdvancedSearchPage
+        onNavigate={navigate}
+        onBookSelect={(book) => setSelectedBook(book)}
+      />
+    );
   if (page === "login") return <LoginPage onNavigate={navigate} />;
   if (page === "register") return <RegisterPage onNavigate={navigate} />;
   if (page === "tentang") return <TentangPage onNavigate={navigate} />;
