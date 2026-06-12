@@ -668,7 +668,7 @@ function BookCard({
     <button
       type="button"
       onClick={() => onSelect?.(book)}
-      className="bg-white rounded-[10px] overflow-hidden cursor-pointer group hover:shadow-xl transition-shadow text-left w-full"
+      className="bg-white rounded-[10px] overflow-hidden cursor-pointer group text-left w-full transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
       style={{
         boxShadow:
           "0px 4px 6px -1px rgba(0,0,0,0.1), 0px 2px 4px -2px rgba(0,0,0,0.1)",
@@ -678,7 +678,7 @@ function BookCard({
         <ImageWithFallback
           src={book.cover}
           alt={book.title}
-          className="absolute inset-0 w-full h-full object-contain pointer-events-none"
+          className="absolute inset-0 w-full h-full object-contain pointer-events-none transition-transform duration-500 group-hover:scale-105"
         />
         <div className="absolute inset-0 bg-black/10 group-hover:bg-black/5 transition-colors" />
       </div>
