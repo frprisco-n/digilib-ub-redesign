@@ -3,33 +3,8 @@ import { ChevronDown, ChevronUp } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import svgPaths from "../../imports/HighFidelityPrototypeCreation/svg-k618aisq46";
 import { AppHeader, AppFooter, Page } from "./AppShell";
-import imgBook0 from "../../imports/HighFidelityPrototypeCreation/ee19ae52921f656297a9cfa9abb0f32bebe6b426.png";
-import imgBook1 from "../../imports/HighFidelityPrototypeCreation/137ca34175f4cdc9b50bda19774356bfc96660b1.png";
-import imgBook2 from "../../imports/HighFidelityPrototypeCreation/cebe2cef357d304068b9b08cedc9f575d765ead7.png";
-import imgBook3 from "../../imports/HighFidelityPrototypeCreation/e18fd9d7d5fe4e2ac4a41cb4e45ffe2af29f891e.png";
-import imgBook4 from "../../imports/HighFidelityPrototypeCreation/f6d3d3f29afca69ace2309a09bd45017c72e6df1.png";
-import imgBook5 from "../../imports/HighFidelityPrototypeCreation/8f2fd68dd76542639900661f12b93d8799fbeea1.png";
-import imgBook6 from "../../imports/HighFidelityPrototypeCreation/9d35ca7066113d7461a263b5fb93290568c4e0df.png";
-import imgBook7 from "../../imports/HighFidelityPrototypeCreation/c86c92f5a290a5e8453c8368d8193cdf3d6b7230.png";
-import imgMatahari from "../../imports/63284537.jpg";
-import imgManajemenStrategi from "../../imports/6940d4eb-74b2-493e-80d5-3b226c4874d9.jpg";
-import imgKebijakanPublik from "../../imports/BLK_KPPPDI202116386.png";
-import imgPulang from "../../imports/pulang_tere_liye.jpg";
-import imgTafsirAlMisbah from "../../imports/2869593.jpg";
-import imgSejarahIndonesia from "../../imports/335-scaled.jpg";
-import imgAlphaGirl from "../../imports/THE_ALPHA_GIRLS_GUIDE.png";
-import imgPsychMoney from "../../imports/psychology_of_money.jfif.png";
+import { allBooks, type Book } from "./BookCollectionPage";
 
-type Book = {
-  id: number;
-  cover: string;
-  genre: string;
-  title: string;
-  author: string;
-  year: number;
-  type: string;
-  subject: string;
-};
 type Operator = "AND" | "OR" | "NOT";
 type Field =
   | "Judul"
@@ -44,169 +19,6 @@ type Condition = {
   field: Field;
   value: string;
 };
-
-const allBooks: Book[] = [
-  {
-    id: 1,
-    cover: imgBook0,
-    genre: "Fiksi",
-    title: "Laut Bercerita",
-    author: "Leila S. Chudori",
-    year: 2017,
-    type: "Buku",
-    subject: "Sastra Indonesia",
-  },
-  {
-    id: 2,
-    cover: imgBook1,
-    genre: "Sains",
-    title: "What Is Science?",
-    author: "Elof Axel Carlson",
-    year: 2019,
-    type: "Buku",
-    subject: "Ilmu Pengetahuan",
-  },
-  {
-    id: 3,
-    cover: imgBook2,
-    genre: "Sejarah",
-    title: "Gajah Mada: Sistem Politik",
-    author: "Enung Nurhayati",
-    year: 2020,
-    type: "Buku",
-    subject: "Sejarah Nusantara",
-  },
-  {
-    id: 4,
-    cover: imgBook3,
-    genre: "Teknologi",
-    title: "Basis Data Relasional",
-    author: "Ridho Rahman Hariadi",
-    year: 2022,
-    type: "Buku",
-    subject: "Ilmu Komputer",
-  },
-  {
-    id: 5,
-    cover: imgBook4,
-    genre: "Bisnis & Ekonomi",
-    title: "Akuntansi Manajemen",
-    author: "Rita Puspaningsih",
-    year: 2021,
-    type: "Buku",
-    subject: "Akuntansi",
-  },
-  {
-    id: 6,
-    cover: imgBook5,
-    genre: "Administrasi",
-    title: "Manajemen Sekolah Inklusif",
-    author: "Sowiyah",
-    year: 2018,
-    type: "Buku",
-    subject: "Pendidikan",
-  },
-  {
-    id: 7,
-    cover: imgBook6,
-    genre: "Agama",
-    title: "The Visual Fiqh",
-    author: "Syekh Salim Al-Hadhrami",
-    year: 2023,
-    type: "Buku",
-    subject: "Fikih",
-  },
-  {
-    id: 8,
-    cover: imgBook7,
-    genre: "Fiksi",
-    title: "Not Quite Dead Yet",
-    author: "Holly Jackson",
-    year: 2024,
-    type: "Buku",
-    subject: "Fiksi Inggris",
-  },
-  {
-    id: 9,
-    cover: imgPsychMoney,
-    genre: "Bisnis & Ekonomi",
-    title: "The Psychology of Money",
-    author: "Morgan Housel",
-    year: 2020,
-    type: "Buku",
-    subject: "Keuangan Pribadi",
-  },
-  {
-    id: 10,
-    cover: imgAlphaGirl,
-    genre: "Self Improvement",
-    title: "The Alpha Girl's Guide",
-    author: "Henry Manampiring",
-    year: 2020,
-    type: "Buku",
-    subject: "Pengembangan Diri",
-  },
-  {
-    id: 11,
-    cover: imgPulang,
-    genre: "Fiksi",
-    title: "Pulang",
-    author: "Tere Liye",
-    year: 2015,
-    type: "Buku",
-    subject: "Sastra Indonesia",
-  },
-  {
-    id: 12,
-    cover: imgSejarahIndonesia,
-    genre: "Sejarah",
-    title: "Sejarah Indonesia Modern",
-    author: "M.C. Ricklefs",
-    year: 2016,
-    type: "Buku",
-    subject: "Sejarah",
-  },
-  {
-    id: 13,
-    cover: imgManajemenStrategi,
-    genre: "Bisnis & Ekonomi",
-    title: "Manajemen Strategi",
-    author: "Fred R. David",
-    year: 2019,
-    type: "Skripsi",
-    subject: "Manajemen",
-  },
-  {
-    id: 14,
-    cover: imgKebijakanPublik,
-    genre: "Administrasi",
-    title: "Kebijakan Publik",
-    author: "Riant Nugroho",
-    year: 2017,
-    type: "Skripsi",
-    subject: "Administrasi Publik",
-  },
-  {
-    id: 15,
-    cover: imgTafsirAlMisbah,
-    genre: "Agama",
-    title: "Tafsir Al-Misbah",
-    author: "M. Quraish Shihab",
-    year: 2002,
-    type: "Buku",
-    subject: "Tafsir Al-Quran",
-  },
-  {
-    id: 16,
-    cover: imgMatahari,
-    genre: "Fiksi",
-    title: "Matahari",
-    author: "Tere Liye",
-    year: 2016,
-    type: "Buku",
-    subject: "Sastra Indonesia",
-  },
-];
 
 const fields: Field[] = [
   "Judul",
@@ -233,7 +45,7 @@ function matchBook(book: Book, field: Field, value: string): boolean {
     case "Penulis":
       return book.author.toLowerCase().includes(v);
     case "Subjek":
-      return book.subject.toLowerCase().includes(v);
+      return book.subject?.toLowerCase().includes(v) ?? false;
     case "Jenis Koleksi":
       return book.type.toLowerCase().includes(v);
     case "Genre":
@@ -292,10 +104,18 @@ function SearchIcon() {
   );
 }
 
-function ResultCard({ book }: { book: Book }) {
+function ResultCard({
+  book,
+  onSelect,
+}: {
+  book: Book;
+  onSelect?: (book: Book) => void;
+}) {
   return (
-    <div
-      className="bg-white rounded-[10px] overflow-hidden flex cursor-pointer hover:shadow-lg transition-shadow"
+    <button
+      type="button"
+      onClick={() => onSelect?.(book)}
+      className="bg-white rounded-[10px] overflow-hidden flex cursor-pointer hover:shadow-lg transition-shadow text-left"
       style={{
         border: "1.601px solid #e0e0e0",
         boxShadow: "0px 2px 4px rgba(0,0,0,0.06)",
@@ -505,9 +325,12 @@ function SearchForm({
 
 // ── Main page ─────────────────────────────────────────────────────────────────
 
-type Props = { onNavigate: (page: Page) => void };
+type Props = {
+  onNavigate: (page: Page) => void;
+  onBookSelect?: (book: Book) => void;
+};
 
-export function AdvancedSearchPage({ onNavigate }: Props) {
+export function AdvancedSearchPage({ onNavigate, onBookSelect }: Props) {
   const [quickSearch, setQuickSearch] = useState("");
   const [conditions, setConditions] = useState<Condition[]>([
     { id: 1, operator: "AND", field: "Judul", value: "" },
@@ -694,7 +517,7 @@ export function AdvancedSearchPage({ onNavigate }: Props) {
                 </div>
                 <div className="space-y-4">
                   {results.map((book) => (
-                    <ResultCard key={book.id} book={book} />
+                    <ResultCard key={book.id} book={book} onSelect={onBookSelect} />
                   ))}
                 </div>
               </>

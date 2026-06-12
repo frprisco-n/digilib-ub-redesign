@@ -72,10 +72,11 @@ export type Book = {
   title: string;
   author: string;
   year: number;
+  subject?: string;
   description?: string;
 };
 
-const allBooks: Book[] = [
+export const allBooks: Book[] = [
   {
     id: 1,
     cover: imgBook0,
@@ -84,6 +85,7 @@ const allBooks: Book[] = [
     title: "Laut Bercerita",
     author: "Leila S. Chudori",
     year: 2017,
+    description: "Novel yang mengisahkan perjalanan seorang jurnalis dan misteri kapal yang tenggelam, berpadu antara sejarah Indonesia dan drama keluarga.",
   },
   {
     id: 2,
@@ -93,6 +95,7 @@ const allBooks: Book[] = [
     title: "What Is Science?",
     author: "Elof Axel Carlson",
     year: 2019,
+    description: "Pengantar sains yang membahas metode ilmiah, sejarah penemuan, dan peran ilmu pengetahuan dalam memahami dunia.",
   },
   {
     id: 3,
@@ -102,6 +105,7 @@ const allBooks: Book[] = [
     title: "Gajah Mada: Sistem Politik",
     author: "Enung Nurhayati",
     year: 2020,
+    description: "Kajian sejarah tentang politik Gajah Mada dan strategi penyatuan Nusantara melalui pendekatan kepemimpinan.",
   },
   {
     id: 4,
@@ -111,6 +115,7 @@ const allBooks: Book[] = [
     title: "Basis Data Relasional",
     author: "Ridho Rahman Hariadi",
     year: 2022,
+    description: "Buku teknologi yang menjelaskan konsep relasional, desain tabel, dan praktik manajemen basis data modern.",
   },
   {
     id: 5,
@@ -120,6 +125,7 @@ const allBooks: Book[] = [
     title: "Akuntansi Manajemen",
     author: "Rita Puspaningsih",
     year: 2021,
+    description: "Buku bisnis yang membahas teknik akuntansi untuk perencanaan, kontrol biaya, dan pengambilan keputusan manajerial.",
   },
   {
     id: 6,
@@ -129,6 +135,7 @@ const allBooks: Book[] = [
     title: "Manajemen Sekolah Inklusif",
     author: "Sowiyah",
     year: 2018,
+    description: "Panduan administrasi untuk menciptakan lingkungan sekolah inklusif yang mendukung siswa beragam.",
   },
   {
     id: 7,
@@ -138,6 +145,7 @@ const allBooks: Book[] = [
     title: "The Visual Fiqh",
     author: "Syekh Salim Al-Hadhrami",
     year: 2023,
+    description: "Buku agama yang menyajikan prinsip fikih secara visual dan praktis untuk kemudahan pemahaman sehari-hari.",
   },
   {
     id: 8,
@@ -147,6 +155,7 @@ const allBooks: Book[] = [
     title: "Not Quite Dead Yet",
     author: "Holly Jackson",
     year: 2024,
+    description: "Thriller remaja dengan misteri, ketegangan psikologis, dan konflik keluarga yang memikat.",
   },
   {
     id: 9,
@@ -156,6 +165,7 @@ const allBooks: Book[] = [
     title: "The Psychology of Money",
     author: "Morgan Housel",
     year: 2020,
+    description: "Buku ekonomi perilaku yang mengeksplorasi hubungan emosional kita dengan uang dan keputusan finansial.",
   },
   {
     id: 10,
@@ -165,6 +175,7 @@ const allBooks: Book[] = [
     title: "The Alpha Girl's Guide",
     author: "Henry Manampiring",
     year: 2020,
+    description: "Buku self improvement yang menginspirasi perempuan untuk percaya diri, mandiri, dan berani mengambil peran.",
   },
   {
     id: 11,
@@ -174,6 +185,7 @@ const allBooks: Book[] = [
     title: "Pulang",
     author: "Tere Liye",
     year: 2015,
+    description: "Novel emosional tentang perjalanan kembali ke rumah, hubungan keluarga, dan makna pulang dalam hidup.",
   },
   {
     id: 12,
@@ -183,6 +195,7 @@ const allBooks: Book[] = [
     title: "Sejarah Indonesia Modern",
     author: "M.C. Ricklefs",
     year: 2016,
+    description: "Buku sejarah yang menelusuri perkembangan Indonesia modern lewat peristiwa politik dan sosial penting.",
   },
   {
     id: 13,
@@ -192,6 +205,7 @@ const allBooks: Book[] = [
     title: "Manajemen Strategi",
     author: "Fred R. David",
     year: 2019,
+    description: "Buku bisnis yang mengulas formulasi strategi, analisis lingkungan, dan implementasi rencana organisasi.",
   },
   {
     id: 14,
@@ -201,6 +215,7 @@ const allBooks: Book[] = [
     title: "Kebijakan Publik",
     author: "Riant Nugroho",
     year: 2017,
+    description: "Buku administrasi yang membahas perumusan dan evaluasi kebijakan publik serta dampaknya pada masyarakat.",
   },
   {
     id: 15,
@@ -210,6 +225,7 @@ const allBooks: Book[] = [
     title: "Tafsir Al-Misbah",
     author: "M. Quraish Shihab",
     year: 2002,
+    description: "Tafsir Al-Qur’an yang mendalam dengan konteks modern, ditulis oleh M. Quraish Shihab.",
   },
   {
     id: 16,
@@ -219,6 +235,7 @@ const allBooks: Book[] = [
     title: "Matahari",
     author: "Tere Liye",
     year: 2016,
+    description: "Novel Tere Liye tentang persahabatan, impian, dan dinamika remaja di lingkungan sekolah.",
   },
   {
     id: 17,
@@ -228,6 +245,7 @@ const allBooks: Book[] = [
     title: "Hujan",
     author: "Tere Liye",
     year: 2016,
+    description: "Cerita Tere Liye tentang cinta, kehilangan, dan harapan dalam kisah emosional para tokoh remaja.",
   },
   {
     id: 18,
@@ -237,6 +255,7 @@ const allBooks: Book[] = [
     title: "Tentang Kamu",
     author: "Tere Liye",
     year: 2016,
+    description: "Novel roman remaja yang mengeksplorasi identitas, persahabatan, dan cinta pertama.",
   },
   {
     id: 19,
@@ -246,6 +265,7 @@ const allBooks: Book[] = [
     title: "Rindu",
     author: "Tere Liye",
     year: 2014,
+    description: "Cerita tentang kerinduan mendalam, perjalanan pribadi, dan hubungan antar karakter dalam suasana introspektif.",
   },
   {
     id: 20,
@@ -255,6 +275,7 @@ const allBooks: Book[] = [
     title: "Pergi",
     author: "Tere Liye",
     year: 2018,
+    description: "Novel tentang perpisahan, perubahan hidup, dan pencarian makna di babak baru kehidupan.",
   },
   {
     id: 21,
@@ -264,6 +285,7 @@ const allBooks: Book[] = [
     title: "Bumi",
     author: "Tere Liye",
     year: 2014,
+    description: "Novel fiksi yang menggabungkan persahabatan, konflik, dan pencarian arti hidup.",
   },
   {
     id: 22,
@@ -273,6 +295,7 @@ const allBooks: Book[] = [
     title: "Bulan",
     author: "Tere Liye",
     year: 2015,
+    description: "Kisah emosional tentang keindahan, rindu, dan perubahan dalam kehidupan sehari-hari.",
   },
   {
     id: 23,
@@ -282,6 +305,7 @@ const allBooks: Book[] = [
     title: "Bintang",
     author: "Tere Liye",
     year: 2017,
+    description: "Novel yang mengangkat harapan, petualangan, dan hubungan personal dalam latar cerita inspiratif.",
   },
   {
     id: 24,
@@ -291,6 +315,7 @@ const allBooks: Book[] = [
     title: "Selamat Tinggal",
     author: "Tere Liye",
     year: 2020,
+    description: "Cerita tentang perpisahan, penerimaan, dan perjalanan emosi di tengah perubahan hidup.",
   },
   {
     id: 25,
@@ -300,6 +325,7 @@ const allBooks: Book[] = [
     title: "Pulang",
     author: "Leila S. Chudori",
     year: 2012,
+    description: "Novel emosional tentang perjalanan kembali ke rumah, hubungan keluarga, dan makna pulang dalam hidup.",
   },
   {
     id: 26,
@@ -309,6 +335,7 @@ const allBooks: Book[] = [
     title: "9 Dari Nadira",
     author: "Leila S. Chudori",
     year: 2009,
+    description: "Kumpulan cerpen yang menelusuri dinamika perempuan dan identitas dalam konteks masyarakat Indonesia.",
   },
   {
     id: 27,
@@ -318,6 +345,7 @@ const allBooks: Book[] = [
     title: "Malam Terakhir",
     author: "Leila S. Chudori",
     year: 1989,
+    description: "Karya sastra yang penuh refleksi tentang akhir, memori, dan konflik batin tokoh-tokohnya.",
   },
   {
     id: 28,
@@ -327,6 +355,7 @@ const allBooks: Book[] = [
     title: "Bumi Manusia",
     author: "Pramoedya Ananta Toer",
     year: 1980,
+    description: "Novel fiksi yang menggabungkan persahabatan, konflik, dan pencarian arti hidup.",
   },
   {
     id: 29,
@@ -336,6 +365,7 @@ const allBooks: Book[] = [
     title: "Anak Semua Bangsa",
     author: "Pramoedya Ananta Toer",
     year: 1980,
+    description: "Karya sejarah sastra yang melanjutkan kisah perjuangan, politik, dan perubahan sosial kolonialisme.",
   },
   {
     id: 30,
@@ -345,6 +375,7 @@ const allBooks: Book[] = [
     title: "Jejak Langkah",
     author: "Pramoedya Ananta Toer",
     year: 1985,
+    description: "Novel yang menelusuri perjalanan hidup tokoh wartawan di tengah pergolakan politik dan sejarah.",
   },
   {
     id: 31,
@@ -354,6 +385,7 @@ const allBooks: Book[] = [
     title: "Rumah Kaca",
     author: "Pramoedya Ananta Toer",
     year: 1988,
+    description: "Kritik sosial yang menggambarkan ketegangan antara kebebasan dan kekuasaan dalam masyarakat kolonial.",
   },
   {
     id: 32,
@@ -363,6 +395,7 @@ const allBooks: Book[] = [
     title: "Gadis Pantai",
     author: "Pramoedya Ananta Toer",
     year: 1962,
+    description: "Novel sastra tentang cinta, konflik keluarga, dan perjuangan perempuan di pesisir Indonesia.",
   },
   {
     id: 33,
@@ -372,6 +405,7 @@ const allBooks: Book[] = [
     title: "Perburuan",
     author: "Pramoedya Ananta Toer",
     year: 1950,
+    description: "Karya sastra yang mengombinasikan ketegangan dan realitas sosial dalam cerita pascakolonial.",
   },
   {
     id: 34,
@@ -381,6 +415,7 @@ const allBooks: Book[] = [
     title: "Bukan Pasar Malam",
     author: "Pramoedya Ananta Toer",
     year: 1951,
+    description: "Kisah urban yang memotret kehidupan dan konflik batin seorang lelaki dalam masyarakat modern.",
   },
   {
     id: 35,
@@ -390,6 +425,7 @@ const allBooks: Book[] = [
     title: "Laskar Pelangi",
     author: "Andrea Hirata",
     year: 2005,
+    description: "Novel inspiratif tentang semangat belajar, persahabatan, dan impian anak-anak di Belitung.",
   },
   {
     id: 36,
@@ -399,6 +435,7 @@ const allBooks: Book[] = [
     title: "Sang Pemimpi",
     author: "Andrea Hirata",
     year: 2006,
+    description: "Novel lanjutan yang menggambarkan perjuangan, harapan, dan mimpi besar sahabat-sahabat muda.",
   },
   {
     id: 37,
@@ -408,6 +445,7 @@ const allBooks: Book[] = [
     title: "Edensor",
     author: "Andrea Hirata",
     year: 2007,
+    description: "Kisah petualangan dan pencarian jati diri dalam latar budaya dan nostalgia perjalanan.",
   },
   {
     id: 38,
@@ -417,6 +455,7 @@ const allBooks: Book[] = [
     title: "Maryamah Karpov",
     author: "Andrea Hirata",
     year: 2008,
+    description: "Karya fiksi oleh Andrea Hirata yang menyoroti karakter, emosi, dan konflik dalam latar cerita yang kuat.",
   },
   {
     id: 39,
@@ -426,6 +465,7 @@ const allBooks: Book[] = [
     title: "Ayah",
     author: "Andrea Hirata",
     year: 2015,
+    description: "Karya fiksi oleh Andrea Hirata yang menyoroti karakter, emosi, dan konflik dalam latar cerita yang kuat.",
   },
   {
     id: 40,
@@ -435,6 +475,7 @@ const allBooks: Book[] = [
     title: "Orang-Orang Biasa",
     author: "Andrea Hirata",
     year: 2019,
+    description: "Karya fiksi oleh Andrea Hirata yang menyoroti karakter, emosi, dan konflik dalam latar cerita yang kuat.",
   },
   {
     id: 41,
@@ -444,6 +485,7 @@ const allBooks: Book[] = [
     title: "Guru Aini",
     author: "Andrea Hirata",
     year: 2020,
+    description: "Karya fiksi oleh Andrea Hirata yang menyoroti karakter, emosi, dan konflik dalam latar cerita yang kuat.",
   },
   {
     id: 42,
@@ -453,6 +495,7 @@ const allBooks: Book[] = [
     title: "Cantik Itu Luka",
     author: "Eka Kurniawan",
     year: 2002,
+    description: "Karya sastra oleh Eka Kurniawan yang mengeksplorasi konteks budaya dan nuansa bahasa.",
   },
   {
     id: 43,
@@ -462,6 +505,7 @@ const allBooks: Book[] = [
     title: "Lelaki Harimau",
     author: "Eka Kurniawan",
     year: 2004,
+    description: "Karya sastra oleh Eka Kurniawan yang mengeksplorasi konteks budaya dan nuansa bahasa.",
   },
   {
     id: 44,
@@ -471,6 +515,7 @@ const allBooks: Book[] = [
     title: "Seperti Dendam, Rindu Harus Dibayar Tuntas",
     author: "Eka Kurniawan",
     year: 2014,
+    description: "Cerita tentang kerinduan mendalam, perjalanan pribadi, dan hubungan antar karakter dalam suasana introspektif.",
   },
   {
     id: 45,
@@ -480,6 +525,7 @@ const allBooks: Book[] = [
     title: "O",
     author: "Eka Kurniawan",
     year: 2016,
+    description: "Karya sastra oleh Eka Kurniawan yang mengeksplorasi konteks budaya dan nuansa bahasa.",
   },
   {
     id: 46,
@@ -489,6 +535,7 @@ const allBooks: Book[] = [
     title: "Perahu Kertas",
     author: "Dee Lestari",
     year: 2009,
+    description: "Karya fiksi oleh Dee Lestari yang menyoroti karakter, emosi, dan konflik dalam latar cerita yang kuat.",
   },
   {
     id: 47,
@@ -498,6 +545,7 @@ const allBooks: Book[] = [
     title: "Supernova: Ksatria, Puteri, dan Bintang Jatuh",
     author: "Dee Lestari",
     year: 2001,
+    description: "Novel yang mengangkat harapan, petualangan, dan hubungan personal dalam latar cerita inspiratif.",
   },
   {
     id: 48,
@@ -507,6 +555,7 @@ const allBooks: Book[] = [
     title: "Aroma Karsa",
     author: "Dee Lestari",
     year: 2018,
+    description: "Karya fiksi oleh Dee Lestari yang menyoroti karakter, emosi, dan konflik dalam latar cerita yang kuat.",
   },
   {
     id: 49,
@@ -516,6 +565,7 @@ const allBooks: Book[] = [
     title: "Rectoverso",
     author: "Dee Lestari",
     year: 2008,
+    description: "Karya fiksi oleh Dee Lestari yang menyoroti karakter, emosi, dan konflik dalam latar cerita yang kuat.",
   },
   {
     id: 50,
@@ -525,6 +575,8 @@ const allBooks: Book[] = [
     title: "Sapiens: A Brief History of Humankind",
     author: "Yuval Noah Harari",
     year: 2011,
+    description:
+      "Sebuah sejarah ringkas umat manusia yang menelusuri evolusi biologis, budaya, agama, dan ekonomi dari manusia purba sampai era modern.",
   },
   {
     id: 51,
@@ -534,6 +586,8 @@ const allBooks: Book[] = [
     title: "Homo Deus: A Brief History of Tomorrow",
     author: "Yuval Noah Harari",
     year: 2015,
+    description:
+      "Eksplorasi kemungkinan masa depan manusia yang dipengaruhi kecerdasan buatan, bioteknologi, dan perubahan nilai-nilai sosial.",
   },
   {
     id: 52,
@@ -543,6 +597,8 @@ const allBooks: Book[] = [
     title: "21 Lessons for the 21st Century",
     author: "Yuval Noah Harari",
     year: 2018,
+    description:
+      "Kumpulan esai yang membahas tantangan global saat ini, mulai dari politik dan teknologi hingga identitas dan makna dalam abad ke-21.",
   },
   {
     id: 53,
@@ -553,6 +609,8 @@ const allBooks: Book[] = [
       "Nexus: A Brief History of Information Networks from the Stone Age to AI",
     author: "Yuval Noah Harari",
     year: 2024,
+    description:
+      "Sejarah jaringan informasi manusia, dari komunikasi awal hingga era internet dan kecerdasan buatan, dengan dampaknya pada masyarakat.",
   },
   {
     id: 54,
@@ -562,6 +620,8 @@ const allBooks: Book[] = [
     title: "Atomic Habits",
     author: "James Clear",
     year: 2018,
+    description:
+      "Panduan praktis untuk membangun kebiasaan kecil yang konsisten dan menciptakan perubahan besar dalam produktivitas dan perilaku.",
   },
   {
     id: 55,
@@ -571,6 +631,8 @@ const allBooks: Book[] = [
     title: "Same as Ever",
     author: "Morgan Housel",
     year: 2023,
+    description:
+      "Analisis tentang bagaimana kebiasaan lama dan pola konsumen tetap memengaruhi keputusan finansial dan perencanaan ekonomi modern.",
   },
   {
     id: 56,
@@ -580,6 +642,8 @@ const allBooks: Book[] = [
     title: "The Art of Spending Money",
     author: "Morgan Housel",
     year: 2025,
+    description:
+      "Panduan tentang seni menggunakan uang secara bijak, termasuk strategi pengeluaran, perencanaan, dan nilai jangka panjang dalam kehidupan.",
   },
 ];
 

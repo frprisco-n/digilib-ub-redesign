@@ -427,7 +427,13 @@ export default function App() {
         onBookSelect={setSelectedBook}
       />
     );
-  if (page === "advanced") return <AdvancedSearchPage onNavigate={navigate} />;
+  if (page === "advanced")
+    return (
+      <AdvancedSearchPage
+        onNavigate={navigate}
+        onBookSelect={setSelectedBook}
+      />
+    );
   if (page === "login") return <LoginPage onNavigate={navigate} />;
   if (page === "register") return <RegisterPage onNavigate={navigate} />;
   if (page === "tentang") return <TentangPage onNavigate={navigate} />;
