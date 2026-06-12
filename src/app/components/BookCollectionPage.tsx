@@ -20,6 +20,41 @@ import imgSejarahIndonesia from "../../imports/335-scaled.jpg";
 import imgAlphaGirl from "../../imports/THE_ALPHA_GIRLS_GUIDE.png";
 import imgPsychMoney from "../../imports/psychology_of_money.jfif.png";
 import imgNoCover from "../../imports/no-cover.svg";
+import imgBook17 from "../../imports/covers/book_17.jpg";
+import imgBook18 from "../../imports/covers/book_18.jpg";
+import imgBook19 from "../../imports/covers/book_19.jpg";
+import imgBook20 from "../../imports/covers/book_20.jpg";
+import imgBook21 from "../../imports/covers/book_21.jpg";
+import imgBook22 from "../../imports/covers/book_22.jpg";
+import imgBook23 from "../../imports/covers/book_23.jpg";
+import imgBook24 from "../../imports/covers/book_24.jpg";
+import imgBook25 from "../../imports/covers/book_25.jpg";
+import imgBook26 from "../../imports/covers/book_26.jpg";
+import imgBook27 from "../../imports/covers/book_27.jpg";
+import imgBook28 from "../../imports/covers/book_28.jpg";
+import imgBook29 from "../../imports/covers/book_29.jpg";
+import imgBook30 from "../../imports/covers/book_30.jpg";
+import imgBook31 from "../../imports/covers/book_31.jpg";
+import imgBook32 from "../../imports/covers/book_32.jpg";
+import imgBook33 from "../../imports/covers/book_33.jpg";
+import imgBook34 from "../../imports/covers/book_34.jpg";
+import imgBook35 from "../../imports/covers/book_35.jpg";
+import imgBook36 from "../../imports/covers/book_36.jpg";
+import imgBook37 from "../../imports/covers/book_37.jpg";
+import imgBook38 from "../../imports/covers/book_38.jpg";
+import imgBook39 from "../../imports/covers/book_39.jpg";
+import imgBook40 from "../../imports/covers/book_40.jpg";
+import imgBook41 from "../../imports/covers/book_41.jpg";
+import imgBook42 from "../../imports/covers/book_42.jpg";
+import imgBook43 from "../../imports/covers/book_43.jpg";
+import imgBook44 from "../../imports/covers/book_44.jpg";
+import imgBook45 from "../../imports/covers/book_45.jpg";
+import imgBook46 from "../../imports/covers/book_46.jpg";
+import imgBook47 from "../../imports/covers/book_47.jpg";
+import imgBook48 from "../../imports/covers/book_48.jpg";
+import imgBook49 from "../../imports/covers/book_49.jpg";
+import imgBook50 from "../../imports/covers/book_50.jpg";
+import imgBook51 from "../../imports/covers/book_51.jpg";
 
 export type CollectionType =
   | "Buku"
@@ -186,7 +221,7 @@ const allBooks: Book[] = [
   },
   {
     id: 17,
-    cover: imgNoCover,
+    cover: imgBook17,
     type: "Buku",
     genre: "Fiksi",
     title: "Hujan",
@@ -195,7 +230,7 @@ const allBooks: Book[] = [
   },
   {
     id: 18,
-    cover: imgNoCover,
+    cover: imgBook18,
     type: "Buku",
     genre: "Fiksi",
     title: "Tentang Kamu",
@@ -204,7 +239,7 @@ const allBooks: Book[] = [
   },
   {
     id: 19,
-    cover: imgNoCover,
+    cover: imgBook19,
     type: "Buku",
     genre: "Fiksi",
     title: "Rindu",
@@ -213,7 +248,7 @@ const allBooks: Book[] = [
   },
   {
     id: 20,
-    cover: imgNoCover,
+    cover: imgBook20,
     type: "Buku",
     genre: "Fiksi",
     title: "Pergi",
@@ -222,7 +257,7 @@ const allBooks: Book[] = [
   },
   {
     id: 21,
-    cover: imgNoCover,
+    cover: imgBook21,
     type: "Buku",
     genre: "Fiksi",
     title: "Bumi",
@@ -231,7 +266,7 @@ const allBooks: Book[] = [
   },
   {
     id: 22,
-    cover: imgNoCover,
+    cover: imgBook22,
     type: "Buku",
     genre: "Fiksi",
     title: "Bulan",
@@ -240,7 +275,7 @@ const allBooks: Book[] = [
   },
   {
     id: 23,
-    cover: imgNoCover,
+    cover: imgBook23,
     type: "Buku",
     genre: "Fiksi",
     title: "Bintang",
@@ -249,7 +284,7 @@ const allBooks: Book[] = [
   },
   {
     id: 24,
-    cover: imgNoCover,
+    cover: imgBook24,
     type: "Buku",
     genre: "Fiksi",
     title: "Selamat Tinggal",
@@ -258,7 +293,7 @@ const allBooks: Book[] = [
   },
   {
     id: 25,
-    cover: imgNoCover,
+    cover: imgBook25,
     type: "Buku",
     genre: "Sastra",
     title: "Pulang",
@@ -267,7 +302,7 @@ const allBooks: Book[] = [
   },
   {
     id: 26,
-    cover: imgNoCover,
+    cover: imgBook26,
     type: "Buku",
     genre: "Sastra",
     title: "9 Dari Nadira",
@@ -276,7 +311,7 @@ const allBooks: Book[] = [
   },
   {
     id: 27,
-    cover: imgNoCover,
+    cover: imgBook27,
     type: "Buku",
     genre: "Sastra",
     title: "Malam Terakhir",
@@ -285,7 +320,7 @@ const allBooks: Book[] = [
   },
   {
     id: 28,
-    cover: imgNoCover,
+    cover: imgBook28,
     type: "Buku",
     genre: "Sejarah",
     title: "Bumi Manusia",
@@ -294,7 +329,7 @@ const allBooks: Book[] = [
   },
   {
     id: 29,
-    cover: imgNoCover,
+    cover: imgBook29,
     type: "Buku",
     genre: "Sejarah",
     title: "Anak Semua Bangsa",
@@ -303,7 +338,7 @@ const allBooks: Book[] = [
   },
   {
     id: 30,
-    cover: imgNoCover,
+    cover: imgBook30,
     type: "Buku",
     genre: "Sejarah",
     title: "Jejak Langkah",
@@ -312,7 +347,7 @@ const allBooks: Book[] = [
   },
   {
     id: 31,
-    cover: imgNoCover,
+    cover: imgBook31,
     type: "Buku",
     genre: "Sejarah",
     title: "Rumah Kaca",
@@ -321,7 +356,7 @@ const allBooks: Book[] = [
   },
   {
     id: 32,
-    cover: imgNoCover,
+    cover: imgBook32,
     type: "Buku",
     genre: "Sastra",
     title: "Gadis Pantai",
@@ -330,7 +365,7 @@ const allBooks: Book[] = [
   },
   {
     id: 33,
-    cover: imgNoCover,
+    cover: imgBook33,
     type: "Buku",
     genre: "Sastra",
     title: "Perburuan",
@@ -339,7 +374,7 @@ const allBooks: Book[] = [
   },
   {
     id: 34,
-    cover: imgNoCover,
+    cover: imgBook34,
     type: "Buku",
     genre: "Sastra",
     title: "Bukan Pasar Malam",
@@ -348,7 +383,7 @@ const allBooks: Book[] = [
   },
   {
     id: 35,
-    cover: imgNoCover,
+    cover: imgBook35,
     type: "Buku",
     genre: "Fiksi",
     title: "Laskar Pelangi",
@@ -357,7 +392,7 @@ const allBooks: Book[] = [
   },
   {
     id: 36,
-    cover: imgNoCover,
+    cover: imgBook36,
     type: "Buku",
     genre: "Fiksi",
     title: "Sang Pemimpi",
@@ -366,7 +401,7 @@ const allBooks: Book[] = [
   },
   {
     id: 37,
-    cover: imgNoCover,
+    cover: imgBook37,
     type: "Buku",
     genre: "Fiksi",
     title: "Edensor",
@@ -375,7 +410,7 @@ const allBooks: Book[] = [
   },
   {
     id: 38,
-    cover: imgNoCover,
+    cover: imgBook38,
     type: "Buku",
     genre: "Fiksi",
     title: "Maryamah Karpov",
@@ -384,7 +419,7 @@ const allBooks: Book[] = [
   },
   {
     id: 39,
-    cover: imgNoCover,
+    cover: imgBook39,
     type: "Buku",
     genre: "Fiksi",
     title: "Ayah",
@@ -393,7 +428,7 @@ const allBooks: Book[] = [
   },
   {
     id: 40,
-    cover: imgNoCover,
+    cover: imgBook40,
     type: "Buku",
     genre: "Fiksi",
     title: "Orang-Orang Biasa",
@@ -402,7 +437,7 @@ const allBooks: Book[] = [
   },
   {
     id: 41,
-    cover: imgNoCover,
+    cover: imgBook41,
     type: "Buku",
     genre: "Fiksi",
     title: "Guru Aini",
@@ -411,7 +446,7 @@ const allBooks: Book[] = [
   },
   {
     id: 42,
-    cover: imgNoCover,
+    cover: imgBook42,
     type: "Buku",
     genre: "Sastra",
     title: "Cantik Itu Luka",
@@ -420,7 +455,7 @@ const allBooks: Book[] = [
   },
   {
     id: 43,
-    cover: imgNoCover,
+    cover: imgBook43,
     type: "Buku",
     genre: "Sastra",
     title: "Lelaki Harimau",
@@ -429,7 +464,7 @@ const allBooks: Book[] = [
   },
   {
     id: 44,
-    cover: imgNoCover,
+    cover: imgBook44,
     type: "Buku",
     genre: "Sastra",
     title: "Seperti Dendam, Rindu Harus Dibayar Tuntas",
@@ -438,7 +473,7 @@ const allBooks: Book[] = [
   },
   {
     id: 45,
-    cover: imgNoCover,
+    cover: imgBook45,
     type: "Buku",
     genre: "Sastra",
     title: "O",
@@ -447,7 +482,7 @@ const allBooks: Book[] = [
   },
   {
     id: 46,
-    cover: imgNoCover,
+    cover: imgBook46,
     type: "Buku",
     genre: "Fiksi",
     title: "Perahu Kertas",
@@ -456,7 +491,7 @@ const allBooks: Book[] = [
   },
   {
     id: 47,
-    cover: imgNoCover,
+    cover: imgBook47,
     type: "Buku",
     genre: "Fiksi",
     title: "Supernova: Ksatria, Puteri, dan Bintang Jatuh",
@@ -465,7 +500,7 @@ const allBooks: Book[] = [
   },
   {
     id: 48,
-    cover: imgNoCover,
+    cover: imgBook48,
     type: "Buku",
     genre: "Fiksi",
     title: "Aroma Karsa",
@@ -474,7 +509,7 @@ const allBooks: Book[] = [
   },
   {
     id: 49,
-    cover: imgNoCover,
+    cover: imgBook49,
     type: "Buku",
     genre: "Fiksi",
     title: "Rectoverso",
@@ -483,7 +518,7 @@ const allBooks: Book[] = [
   },
   {
     id: 50,
-    cover: imgNoCover,
+    cover: imgBook50,
     type: "Buku",
     genre: "Nonfiksi",
     title: "Sapiens: A Brief History of Humankind",
@@ -492,7 +527,7 @@ const allBooks: Book[] = [
   },
   {
     id: 51,
-    cover: imgNoCover,
+    cover: imgBook51,
     type: "Buku",
     genre: "Nonfiksi",
     title: "Homo Deus: A Brief History of Tomorrow",
