@@ -72,6 +72,7 @@ export type Book = {
   title: string;
   author: string;
   year: number;
+  description?: string;
 };
 
 const allBooks: Book[] = [

@@ -38,6 +38,8 @@ const books: Book[] = [
     title: "Laut Bercerita",
     author: "Leila S. Chudori",
     year: 2017,
+    description:
+      "Novel yang mengisahkan perjalanan seorang jurnalis muda bernama Aur dan misteri di balik kapal yang tenggelam, dengan latar sejarah Indonesia dan kisah keluarga yang menyentuh.",
   },
   {
     id: 2,
@@ -47,6 +49,8 @@ const books: Book[] = [
     title: "What Is Science?",
     author: "Elof Axel Carlson",
     year: 2019,
+    description:
+      "Pengantar sains yang membahas metode ilmiah, sejarah penemuan penting, dan bagaimana sains membentuk pemahaman kita tentang alam semesta.",
   },
   {
     id: 3,
@@ -56,6 +60,8 @@ const books: Book[] = [
     title: "Gajah Mada: Sistem Politik",
     author: "Enung Nurhayati",
     year: 2020,
+    description:
+      "Kajian tentang politik dan manajemen negara di masa pemerintahan Gajah Mada, menyorot strategi kepemimpinan serta peranannya dalam menyatukan Nusantara.",
   },
   {
     id: 4,
@@ -65,6 +71,8 @@ const books: Book[] = [
     title: "Basis Data Relasional",
     author: "Ridho Rahman Hariadi",
     year: 2022,
+    description:
+      "Panduan praktis untuk memahami konsep relasional, desain skema, dan pemrograman basis data menggunakan teori dan contoh nyata yang mudah diikuti.",
   },
   {
     id: 5,
@@ -74,6 +82,8 @@ const books: Book[] = [
     title: "Akuntansi Manajemen",
     author: "Rita Puspaningsih",
     year: 2021,
+    description:
+      "Penjelasan tentang peran akuntansi dalam pengambilan keputusan manajerial, termasuk perencanaan, pengendalian biaya, dan pengukuran kinerja organisasi.",
   },
   {
     id: 6,
@@ -83,6 +93,8 @@ const books: Book[] = [
     title: "Manajemen Sekolah Inklusif",
     author: "Sowiyah",
     year: 2018,
+    description:
+      "Buku ini membahas prinsip dan praktik manajemen pendidikan inklusif, dengan fokus pada strategi mengelola sekolah yang ramah bagi siswa berkebutuhan khusus.",
   },
   {
     id: 7,
@@ -92,6 +104,8 @@ const books: Book[] = [
     title: "The Visual Fiqh",
     author: "Syekh Salim Al-Hadhrami",
     year: 2023,
+    description:
+      "Karya fiqh visual yang menyajikan hukum Islam dalam format gambar dan penjelasan ringkas, memudahkan pemahaman ibadah dan tata cara sehari-hari.",
   },
   {
     id: 8,
@@ -101,6 +115,8 @@ const books: Book[] = [
     title: "Not Quite Dead Yet",
     author: "Holly Jackson",
     year: 2024,
+    description:
+      "Thriller remaja penuh teka-teki tentang Olivia, gadis yang dilema antara dilema keluarga, identitas, dan rahasia gelap yang melibatkan teman-teman sekolahnya.",
   },
 ];
 
@@ -307,11 +323,8 @@ function BookDetailPage({
             <div className="mt-8 pt-8 border-t border-[#e0e0e0]">
               <h2 className="text-xl font-bold text-[#092c4c]">Deskripsi</h2>
               <p className="text-base text-[#4f4f4f] leading-8 mt-3">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-                vitae posuere lectus. Aliquam erat volutpat. Donec facilisis,
-                lacus at bibendum dignissim, sem urna porttitor purus, vitae
-                luctus massa risus vitae augue. Curabitur vitae justo non tortor
-                interdum pretium.
+                {book.description ??
+                  "Deskripsi untuk buku ini belum tersedia, tetapi Anda dapat menemukan informasi publikasinya dan topik utama melalui sumber perpustakaan resmi."}
               </p>
             </div>
           </div>
